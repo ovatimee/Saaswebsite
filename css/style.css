@@ -20,7 +20,7 @@ body {
   --light-grey: #969696;
   --white-color: #ffffff;
   --secondary-color: #6a4bff;
-  --primary-color: #00218F;
+  --primary-color: #00218f;
 }
 
 .btn {
@@ -29,7 +29,7 @@ body {
   border-radius: 5px;
   display: inline-block;
 }
-.p-text{
+.p-text {
   padding: 1rem;
   color: var(--light-grey);
 }
@@ -221,6 +221,7 @@ nav li a {
 .pricing {
   text-align: center;
   font-weight: 500;
+  background-color: rgba(225, 225, 225, 0.1);
 }
 
 .pricing .header-title {
@@ -228,15 +229,40 @@ nav li a {
   padding: 7rem 0 2rem;
 }
 
-
-.prices-container {
+.pricing .duration {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pricing .duration label {
+  width: 70px;
+  border-radius: 12px;
+  padding: 1rem 1.3rem;
+  position: relative;
+  background: #F2F2FF;
+}
+
+.pricing .duration label::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #152C5B;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+.prices-container {
+  display: grid;
   text-align: left;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 4rem 3rem;
-  line-height: 1.8;
+  line-height: 1.5;
+  place-items: center;
 }
 
 .price-card {
@@ -244,9 +270,10 @@ nav li a {
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
+  max-width: 350px;
 }
 
-.price-card:nth-child(2){
+.price-card:nth-child(2) {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
@@ -290,25 +317,34 @@ nav li a {
 
 /* Testimonial Section */
 .testimonials-container {
-  padding: 2rem 4rem;
+  padding: 8rem 4rem;
 }
 
-.testimonials-container h1{
+.testimonials-container h1 {
   font-size: 2rem;
   padding: 2rem;
   color: var(--dark-color);
 }
 
 .testimonials {
-  display: flex;
+  display: grid;
   gap: 2rem;
 }
 
 .testimonial-card {
   text-align: left;
-  padding: 2rem;
+  padding: 1.5rem;
   border: 1px solid rgba(234, 234, 234, 0.5);
   border-radius: 5px;
+}
+
+.testimonial-card .occupation{
+  color: var(--light-grey);
+}
+.testimonial-card img{
+  width: 60px;
+  display: block;
+  margin-left: 20px;
 }
 
 .testimonials .profile {
@@ -317,8 +353,59 @@ nav li a {
   gap: 1rem;
 }
 
-  @media screen and (max-width: 800px) {
-    .hero .header-title{
-    font-size: 2rem;
-    }
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  background-color: #F9F9F9;
+}
+
+footer table{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer table tr{
+  padding: 3rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .services-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
+  
+.prices-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonials{
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media screen and (max-width: 850px) {
+  .services-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.prices-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.testimonials{
+  grid-template-columns: repeat(2, 1fr);
+}
+/*  .hero .header-title {
+    font-size: 2rem;
+  } */
+
+  .team h1 {
+    font-size: 2rem;
+    display: none;
+  }
+}
