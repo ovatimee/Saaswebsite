@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +9,7 @@
 
 body {
   font-size: 15px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   width: 100vw;
 }
 
@@ -57,17 +59,16 @@ img {
 nav .logo {
   display: flex;
   align-items: center;
-  width: 20px;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-nav .logo h1 {
-  font-size: 12px;
-}
 
 nav .nav-list {
   display: flex;
   list-style: none;
+}
+
+.mobile-nav-icon {
   display: none;
 }
 
@@ -75,15 +76,11 @@ nav li a {
   margin: 0 0.8rem;
 }
 
-nav li a:hover{
+nav li a:hover {
   color: var(--secondary-color);
 }
 
-nav .user-auth{
-  display: none;
-}
-
-.mobile-nav-icon svg{
+.mobile-nav-icon svg {
   width: 25px;
 }
 
@@ -104,12 +101,7 @@ nav .user-auth{
   color: var(--secondary-color);
 }
 
-.hero .header-title {
-  font-size: 1.8rem;
-  /* padding: 4rem 0 2rem 0; */
-}
-
-.hero p{
+.hero p {
   /* display: none; */
   color: #00218f;
   text-align: left;
@@ -119,7 +111,6 @@ nav .user-auth{
 .hero .dashboard {
   padding: 1rem 4rem;
 }
-
 
 .hero .dashboard img {
   display: block;
@@ -169,12 +160,10 @@ nav .user-auth{
 }
 
 .service-card {
- 
   border: 1px solid rgba(234, 234, 234, 0.5);
   border-radius: 5px;
   padding: 0.8rem 1rem;
   color: var(--light-grey);
-  
 }
 
 .service-card h3 {
@@ -185,7 +174,7 @@ nav .user-auth{
 
 .service-card a {
   display: inline-block;
-  padding: .7rem 0;
+  padding: 0.7rem 0;
   color: var(--secondary-color);
 }
 
@@ -239,11 +228,9 @@ nav .user-auth{
   color: var(--white-color);
 }
 .team .team-info {
-
 }
 
 .prototype-light {
- 
 }
 
 /* Prices Section */
@@ -255,7 +242,6 @@ nav .user-auth{
 }
 
 .pricing .header-title {
-  font-size: 1.8rem;
   padding: 7rem 0 2rem;
 }
 
@@ -271,7 +257,7 @@ nav .user-auth{
   border-radius: 12px;
   padding: 1rem 1.3rem;
   position: relative;
-  background: #F2F2FF;
+  background: #f2f2ff;
 }
 
 .pricing .duration label::before {
@@ -279,7 +265,7 @@ nav .user-auth{
   width: 25px;
   height: 25px;
   border-radius: 25px;
-  background-color: #152C5B;
+  background-color: #152c5b;
   position: absolute;
   left: 3px;
   top: 3px;
@@ -290,8 +276,7 @@ nav .user-auth{
   text-align: left;
   gap: 2rem;
   padding: 4rem 3rem;
-  line-height: 1.2;
-  
+  place-items: center;
 }
 
 .price-card {
@@ -319,7 +304,6 @@ nav .user-auth{
   padding-left: 1.5rem;
 }
 
-
 .price-card ul li::marker {
   color: var(--dark-color);
   font-size: 2rem;
@@ -336,7 +320,6 @@ nav .user-auth{
 
 /* Testimonial Section */
 .testimonials-container {
-
   padding: 4rem 2rem;
 }
 
@@ -349,7 +332,7 @@ nav .user-auth{
 .testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
+  place-items: center;
   gap: 2rem;
 }
 
@@ -360,10 +343,10 @@ nav .user-auth{
   border-radius: 5px;
 }
 
-.testimonial-card .occupation{
+.testimonial-card .occupation {
   color: var(--light-grey);
 }
-.testimonial-card img{
+.testimonial-card img {
   width: 60px;
   display: block;
   margin-left: 20px;
@@ -375,15 +358,13 @@ nav .user-auth{
   gap: 1rem;
 }
 
-footer{
-
-  padding: 3rem .8rem;
-  background-color: #F9F9F9;
+footer {
+  padding: 3rem 0.8rem;
+  background-color: #f9f9f9;
 }
 
-footer .table-list{
+footer .table-list {
   display: flex;
-  gap: 1.5rem;
   align-items: center;
   justify-content: center;
 }
@@ -393,11 +374,8 @@ footer .table-list{
   text-align: none;
 }
 
-.table-list lh {
-  margin-bottom: 2rem;
-}
 
-.footer-top{
+.footer-top {
   justify-content: center;
   display: flex;
   align-items: center;
@@ -405,62 +383,158 @@ footer .table-list{
   padding-bottom: 2rem;
 }
 
-@media screen and (min-width: 1200px){
-
-
-}
-
-@media screen and (min-width: 1000px) {
-  nav .logo{
-    width: 30px;
-  }
-  nav .nav-list{
+@media screen and (min-width: 1100px) {
+  nav .logo {
     display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
-  nav .user-auth{
-    display: flex;
-    gap: 1.2rem;
-  }
-  .hero .header-title{
+  
+  .header-title,
+  .services h1,
+  .team-info h1,
+  .pricing h1,
+  .pricing .header-title,
+  .testimonials-container h1 {
     font-size: 2.6rem;
   }
 
-  .services h1 { 
-    font-size: 2.6rem;
-  }
-
-  .services .p-text {
-    font-size: 1rem;
-  }
-.services .services-cards{
-  line-height: 1.2;
-}
-}
-
-@media screen and (min-width: 700px) {
-  nav .logo h1 {
-    font-size: 18px;
-  }
-
-  .team-info h1{
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .team .p-text{
-    padding-right: 4rem;
-  }
-
-  .team .prototype-light{
-    padding: 1rem 5rem;
+  .team{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-size: contain;
   }
 
   .prices-container{
-    line-height: 1.4;
-    place-items: center;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    line-height: 1.6;
   }
 
-  footer .table-list{
+  footer {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+
+  }
+  footer .table-list {
     gap: 3rem;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+  
+
+}
+
+@media screen and (max-width: 1000px) {
+  nav .logo {
+    width: 30px;
+  }
+  nav .nav-list {
+    display: flex;
+  }
+  nav .user-auth {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  .header-title,
+  .services h1,
+  .team-info h1,
+  .pricing h1,
+  .pricing .header-title,
+  .testimonials-container h1 {
+    font-size: 2.3rem;
+  }
+ 
+  .services .p-text {
+    font-size: 1rem;
+  }
+  .services .services-cards {
+    line-height: 1.2;
+  }
+
+  .prototype-light {
+    padding-inline: 4rem;
+  }
+
+  .prices-container{
+    line-height: 1.5;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 3rem;
+  }
+  .footer-top {
+    display: block;
+  }
+  .footer-top p {
+    padding-top: 1rem;
   }
 }
+
+@media screen and (max-width: 760px) {
+  nav .logo h1 {
+    font-size: 18px;
+  }
+  nav .nav-list {
+    list-style: none;
+    display: none;
+  }
+
+  nav .user-auth {
+    display: none;
+  }
+
+  .header-title,
+  .services h1,
+  .team-info h1,
+  .pricing h1,
+  .pricing .header-title,
+  .testimonials-container h1 
+  .team-info h1{
+    font-size: 1.3rem;
+  }
+
+  .mobile-nav-icon {
+    display: block;
+  }
+  .team-info h1{
+    text-align: center;
+  }
+
+  .team .p-text {
+    padding-right: 4rem;
+  }
+
+  .team .prototype-light {
+    padding: 1rem 2rem;
+  }
+
+  .prices-container {
+    line-height: 1.4;
+  }
+
+  footer {
+    display: block;
+    padding: 4rem 3rem;
+  }
+
+  footer .table-list {
+    gap: 3rem;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+  .footer-top {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+}
+
