@@ -51,13 +51,18 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 nav .logo {
   display: flex;
   align-items: center;
   width: 20px;
+  gap: .5rem;
+}
+
+nav .logo h1 {
+  font-size: 12px;
 }
 
 nav .nav-list {
@@ -76,6 +81,10 @@ nav li a:hover{
 
 nav .user-auth{
   display: none;
+}
+
+.mobile-nav-icon svg{
+  width: 25px;
 }
 
 .hero a {
@@ -234,6 +243,7 @@ nav .user-auth{
 }
 
 .prototype-light {
+ 
 }
 
 /* Prices Section */
@@ -280,7 +290,7 @@ nav .user-auth{
   text-align: left;
   gap: 2rem;
   padding: 4rem 3rem;
-  line-height: 1.5;
+  line-height: 1.2;
   
 }
 
@@ -338,6 +348,8 @@ nav .user-auth{
 
 .testimonials {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
   gap: 2rem;
 }
 
@@ -398,7 +410,7 @@ footer .table-list{
 
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1000px) {
   nav .logo{
     width: 30px;
   }
@@ -423,4 +435,32 @@ footer .table-list{
 .services .services-cards{
   line-height: 1.2;
 }
+}
+
+@media screen and (min-width: 700px) {
+  nav .logo h1 {
+    font-size: 18px;
+  }
+
+  .team-info h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .team .p-text{
+    padding-right: 4rem;
+  }
+
+  .team .prototype-light{
+    padding: 1rem 5rem;
+  }
+
+  .prices-container{
+    line-height: 1.4;
+    place-items: center;
+  }
+
+  footer .table-list{
+    gap: 3rem;
+  }
 }
