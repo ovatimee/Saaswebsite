@@ -57,6 +57,7 @@ img {
 nav .logo {
   display: flex;
   align-items: center;
+  width: 20px;
 }
 
 nav .nav-list {
@@ -64,8 +65,17 @@ nav .nav-list {
   list-style: none;
   display: none;
 }
+
 nav li a {
   margin: 0 0.8rem;
+}
+
+nav li a:hover{
+  color: var(--secondary-color);
+}
+
+nav .user-auth{
+  display: none;
 }
 
 .hero a {
@@ -86,18 +96,24 @@ nav li a {
 }
 
 .hero .header-title {
-  font-size: 3rem;
-  padding: 4rem 0 2rem 0;
+  font-size: 1.8rem;
+  /* padding: 4rem 0 2rem 0; */
+}
+
+.hero p{
+  /* display: none; */
+  color: #00218f;
+  text-align: left;
+  display: none;
 }
 
 .hero .dashboard {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 1rem 4rem;
 }
+
+
 .hero .dashboard img {
-  display: inline-block;
+  display: block;
 }
 
 .hero .header-title span {
@@ -124,7 +140,7 @@ nav li a {
 }
 
 .services h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--dark-color);
   padding: 1rem 0;
@@ -132,23 +148,24 @@ nav li a {
 
 .services .p-text {
   color: var(--light-grey);
-  width: 50%;
-  margin-inline: auto;
+  text-align: center;
 }
 
 .services-cards {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   text-align: left;
   gap: 1.3rem;
   padding: 2rem 3rem;
 }
 
 .service-card {
-  flex-wrap: wrap;
+ 
   border: 1px solid rgba(234, 234, 234, 0.5);
   border-radius: 5px;
   padding: 0.8rem 1rem;
   color: var(--light-grey);
+  
 }
 
 .service-card h3 {
@@ -158,38 +175,43 @@ nav li a {
 }
 
 .service-card a {
+  display: inline-block;
+  padding: .7rem 0;
   color: var(--secondary-color);
 }
 
 /* Team Section */
 
 .team {
-  display: flex;
   justify-content: center;
   line-height: 1.5;
   align-items: center;
-  padding: 5rem 3rem;
+  padding: 3rem;
   background-color: #f2f2ff;
   background-image: url(../assets/team-bg.png);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: contain;
+  background-size: cover;
 }
 
 .team h1 {
-  font-size: 3rem;
-  color: var(--dark-color);
+  font-size: 1.6rem;
+  padding: 1rem;
+  color: #000;
 }
 .team .btn {
   background-color: #6a4bff;
   color: var(--white-color);
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  border: none;
+  width: 200px;
   margin-top: 1.5rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .team .avatars {
-  display: flex;
   position: relative;
 }
 
@@ -205,15 +227,13 @@ nav li a {
 }
 
 .team .p-text {
-  color: var(--light-grey);
+  color: var(--white-color);
 }
 .team .team-info {
-  max-width: 40%;
-  padding: 1rem 7rem 0 0;
+
 }
 
 .prototype-light {
-  max-width: 40%;
 }
 
 /* Prices Section */
@@ -225,7 +245,7 @@ nav li a {
 }
 
 .pricing .header-title {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   padding: 7rem 0 2rem;
 }
 
@@ -256,13 +276,12 @@ nav li a {
 }
 .prices-container {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   text-align: left;
-  justify-content: center;
-  align-items: center;
   gap: 2rem;
   padding: 4rem 3rem;
   line-height: 1.5;
-  place-items: center;
+  
 }
 
 .price-card {
@@ -279,27 +298,17 @@ nav li a {
 }
 
 .price-card h1 {
-  font-size: 3rem;
+  font-size: 1.8rem;
+  /* font-size: 3rem; */
   color: var(--dark-color);
   padding: 1rem 0;
 }
 
 .price-card ul {
   text-align: left;
+  padding-left: 1.5rem;
 }
 
-/* .price-card ul li::after{
-  content: '';
-  width: 2em;
-  font-size: 2em;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: var(--dark-color);
-  color: var(--dark-color);
-  z-index: 2;
-  text-align: center;
-} */
 
 .price-card ul li::marker {
   color: var(--dark-color);
@@ -317,11 +326,12 @@ nav li a {
 
 /* Testimonial Section */
 .testimonials-container {
-  padding: 8rem 4rem;
+
+  padding: 4rem 2rem;
 }
 
 .testimonials-container h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding: 2rem;
   color: var(--dark-color);
 }
@@ -354,58 +364,63 @@ nav li a {
 }
 
 footer{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem;
+
+  padding: 3rem .8rem;
   background-color: #F9F9F9;
 }
 
-footer table{
+footer .table-list{
   display: flex;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
 }
 
-footer table tr{
-  padding: 3rem;
+.table-list li {
+  list-style: none;
+  text-align: none;
 }
 
-@media screen and (min-width: 1000px) {
-  .services-cards{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.table-list lh {
+  margin-bottom: 2rem;
+}
+
+.footer-top{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 1200px){
+
+
+}
+
+@media screen and (max-width: 1000px) {
+  nav .logo{
+    width: 30px;
   }
-  
-.prices-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.testimonials{
-  grid-template-columns: repeat(3, 1fr);
-}
-}
-
-@media screen and (max-width: 850px) {
-  .services-cards{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  nav .nav-list{
+    display: flex;
+  }
+  nav .user-auth{
+    display: flex;
+    gap: 1.2rem;
+  }
+  .hero .header-title{
+    font-size: 2.6rem;
   }
 
-.prices-container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.testimonials{
-  grid-template-columns: repeat(2, 1fr);
-}
-/*  .hero .header-title {
-    font-size: 2rem;
-  } */
-
-  .team h1 {
-    font-size: 2rem;
-    display: none;
+  .services h1 { 
+    font-size: 2.6rem;
   }
+
+  .services .p-text {
+    font-size: 1rem;
+  }
+.services .services-cards{
+  line-height: 1.2;
+}
 }
